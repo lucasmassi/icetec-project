@@ -62,7 +62,11 @@ class DeveloperController {
                 return res.status(400).send({ error: 'Developer not found' })
             }
     
-            const dev = await User.findByPk(userId);
+            const dev = await Developer.findByPk(devId);
+
+            if (!dev) {
+                return res.status(400).json({ error: 'Developer not found' });
+            }
     
             return res.json(dev);
         } catch (err) {
@@ -73,7 +77,7 @@ class DeveloperController {
     async listAll(req, res) {
         try {
             const search = req.query.search ?? "";
-            const developers = await Developers.findAll({
+            const developers = await Developer.findAll({
                 where: {
                     [Op.or]: [
                         { name: { [Op.like]: `%${search}%` } },
