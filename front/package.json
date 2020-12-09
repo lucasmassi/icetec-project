@@ -21,6 +21,7 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.9.0",
     "react-input-mask": "^2.0.4",
+    "react-multi-select-component": "^3.0.7",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",

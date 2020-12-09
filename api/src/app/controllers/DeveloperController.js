@@ -10,7 +10,7 @@ class DeveloperController {
                 email: Yup.string().email().required(),
                 age: Yup.string().required(),
                 url_linkedin: Yup.string(),
-                tecnologies: Yup.string(),
+                technologies: Yup.string(),
             });
 
             if (!(await schema.isValid(req.body))) {
@@ -33,7 +33,7 @@ class DeveloperController {
                 email: Yup.string().email(),
                 age: Yup.string(),
                 url_linkedin: Yup.string(),
-                tecnologies: Yup.string(),
+                technologies: Yup.string(),
             });
     
             if (!(await schema.isValid(req.body))) {
@@ -82,7 +82,7 @@ class DeveloperController {
                     [Op.or]: [
                         { name: { [Op.like]: `%${search}%` } },
                         { age: { [Op.like]: `%${search}%` } },
-                        { tecnologies: { [Op.like]: `%${search}%` } },
+                        { technologies: { [Op.like]: `%${search}%` } },
                     ]
                 },
                 order: ["name"]

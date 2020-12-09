@@ -22,7 +22,7 @@ module.exports = {
       url_linkedin: {
         type: Sequelize.STRING
       },
-      tecnologies: {
+      technologies: {
         type: Sequelize.STRING
       },
       created_at: {

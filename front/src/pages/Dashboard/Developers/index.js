@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import { FiPlus, FiArrowLeftCircle, FiArrowRightCircle } from 'react-icons/fi';
-import { Container, Content, Table } from './styles';
+import { Container, Content, Table, Search } from './styles';
 
 import LeftMenu from '../../../components/Dashboard/LeftMenu';
 import Loader from '../../../components/Dashboard/Loader';
@@ -36,6 +36,17 @@ export default function Developers() {
         loadDevs();
     }, []);
 
+    async function searchInventories(e) {
+        try {
+            setLoading(true);
+            const response = await api.get(`developers?search=${e.target.value}`);
+            setDevelopers(response.data);
+        } catch (err) {
+        } finally {
+            setLoading(false);
+        }
+    }
+
     return (
         <Container>
             <LeftMenu pagina="programadores" />
@@ -45,6 +56,10 @@ export default function Developers() {
                         <FiPlus size={15} /> Novo programador
                     </Link>
                 </h1>
+                <Search>
+                    <input placeholder="Buscar programadores por nome, idade ou tecnologia" onChange={searchInventories} />
+                    {/* <button type="button">Buscar<FiSearch size={15} /></button> */}
+                </Search>
                 { loading ? <Loader /> : (developers.length == 0 ? 
                     <span><Link to={'/programadores/0'}>Nenhum registro, <strong>cadastrar um novo programador</strong></Link></span>
                     :
@@ -56,7 +71,6 @@ export default function Developers() {
                                 <td>Email</td>
                                 <td>Idade</td>
                                 <td>Linkedin</td>
-                                <td>Tecnologias</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,7 +80,6 @@ export default function Developers() {
                                     <td>{dev.email}</td>
                                     <td>{dev.age}</td>
                                     <td>{dev.url_linkedin}</td>
-                                    <td>{dev.tecnologies}</td>
                                 </tr>
                             )) }
                         </tbody>

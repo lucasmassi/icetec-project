@@ -102,7 +102,7 @@ export const Content = styled.div`
             color: #407BFF;
         }
 
-        input, select {
+        input {
             width: 100%;
             background: transparent;
             margin-bottom: 15px;
@@ -112,6 +112,11 @@ export const Content = styled.div`
             font-size: 16px;
             color: #515354;
             transition: 0.3s;
+        }
+
+        .multi-select {
+            color: #515354;
+            margin-bottom: 20px;
         }
     }
 
@@ -277,5 +282,44 @@ export const Totalizer = styled.span`
 
     strong {
         font-size: 16px;
+    }
+`;
+
+
+export const Search = styled.div`
+    text-align: left;
+    margin-bottom: 12px;
+    box-shadow: 2px 2px 16px -9px black;
+
+    input {
+        width: 100%;
+        background: #407bff;
+        border: 2px solid #407bff;
+        border-radius: 1px 10px 1px 10px;
+        padding: 5px 10px 5px 10px;
+        color: #FFFF;
+        font-size: 16px;
+
+        ::placeholder {
+            color: #a9c3ff;
+        }
+    }
+
+    button {
+        float: right;
+        margin-top: 7px;
+        background: none;
+        border: none;
+        border-radius: 3px;
+        color: #faa61a;
+        font-size: 16px;
+        font-weight: bold;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-left: 10px;
+        }
     }
 `;

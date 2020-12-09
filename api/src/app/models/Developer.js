@@ -8,7 +8,7 @@ class Developer extends Model {
         email: Sequelize.STRING,
         age: Sequelize.STRING,
         url_linkedin: Sequelize.STRING,
-        tecnologies: Sequelize.STRING,
+        technologies: Sequelize.STRING,
       },
       {
         sequelize,

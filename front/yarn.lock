@@ -4996,6 +4996,11 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+goober@^2.0.4:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-2.0.16.tgz#95bd36853c6507f1b3bba83ed46bdba5e8853f16"
+  integrity sha512-6TGh7BiIndjyLXPGj+bL75VcyOWWUicgAxDcJHD/hNI4p+maa/c0ILyvMrBQlgL7hG00H/DuJ9q/qM3K1EujeA==
+
 good-listener@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
@@ -8871,6 +8876,13 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-i
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-multi-select-component@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/react-multi-select-component/-/react-multi-select-component-3.0.7.tgz#73a1642cd795bfc7ac878371cf1bb9bb4b508a37"
+  integrity sha512-Mhvn8ANIaFOzj7dKz8DEQNcCS2ZikesuWNpmEbbWkDG2Hwbao2QcmLTyiSPQILMo+NP8D2+KWQu5qDN1wV9Cqw==
+  dependencies:
+    goober "^2.0.4"
 
 react-redux@^7.2.0:
   version "7.2.0"
