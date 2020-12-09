@@ -30,16 +30,16 @@ da api e o react para o front.
 
 ### Login
 
-![Login](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Login.png)
+![Login](https://github.com/lucasmassi/icetec-project/blob/master/front/src/assets/Login.png)
 
 ### Dashboard
 
-![Dashboard](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Main.png)
+![Dashboard](https://github.com/lucasmassi/icetec-project/blob/master/front/src/assets/Main.png)
 
 ### Programadores
 
-![Programadores](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Programadores.png)
+![Programadores](https://github.com/lucasmassi/icetec-project/blob/master/front/src/assets/Programadores.png)
 
 ### Edição
 
-![Edição](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Edit.png)
+![Edição](https://github.com/lucasmassi/icetec-project/blob/master/front/src/assets/Edit.png)
