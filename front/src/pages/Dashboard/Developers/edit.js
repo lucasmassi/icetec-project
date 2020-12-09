@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Form, Input } from "@rocketseat/unform";
@@ -18,40 +18,34 @@ export default function DevelopersEdit({ match }) {
     const [loading, setLoading] = useState(false);
     const [loadingDelete, setLoadingDelete] = useState(false);
     const [developer, setDeveloper] = useState([]);
-    const [newDeveloper, setNewDeveloper] = useState(false);
-
-    useEffect(() => {
-        async function loadDev() {
-            try {
-                if (id == 0) {
-                    setNewDeveloper(true);
-                }
-
-                if (!newDeveloper) {
-                    await api.get(`developers/${id}`)
-                        .then(function (res) {
-                            setLoading(true);
-                            setDeveloper(res.data);
-                        })
-                        .finally(function () {
-                            setLoading(false);
-                        });
-                }
-
-            } catch (err) {
-                history.push('/programadores');
-            } finally {
-                setLoading(false);
-            }
-        }
     
+    const loadDev = useCallback(async () => {
+        try {
+            if (id != 0) {
+                await api.get(`developers/${id}`)
+                    .then(function (res) {
+                        setLoading(true);
+                        setDeveloper(res.data);
+                    })
+                    .finally(function () {
+                        setLoading(false);
+                    });
+            }
+        } catch (err) {
+            history.push('/programadores');
+        } finally {
+            setLoading(false);
+        }
+    }, [id]);
+
+    useLayoutEffect(() => {
         loadDev();
-    }, []);
+    }, [loadDev]);
 
     async function handleSubmit(data) {
         try {
             setLoading(true);
-            if (newDeveloper) {
+            if (id == 0) {
                 await api.post('developers', { 
                     name: data.name, 
                     email: data.email, 
@@ -112,7 +106,7 @@ export default function DevelopersEdit({ match }) {
                     <Input id="tecnologies" name="tecnologies" label="Tecnologias" type="text" />
 
                     <ButtonSave type="submit">{loading ? <LoadButton /> : <><FiCheck size={15} /> Salvar</>}</ButtonSave>
-                    {!newDeveloper ? <ButtonDelete type="button" onClick={handleDelete}>{loadingDelete ? <LoadButton /> : <><FiTrash2 size={15} /> Remover</>}</ButtonDelete> : ""}
+                    {id != 0 ? <ButtonDelete type="button" onClick={handleDelete}>{loadingDelete ? <LoadButton /> : <><FiTrash2 size={15} /> Remover</>}</ButtonDelete> : ""}
                 </Form>
             </Content>
         </Container>

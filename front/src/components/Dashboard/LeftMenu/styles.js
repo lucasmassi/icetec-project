@@ -4,7 +4,7 @@ export const Container = styled.div`
     min-width: 88px;
     min-height: 100vh;
     height: auto;
-    background: #1787c8;
+    background: #407BFF;
     color: #ffffff;
     font-size: 20px;
     text-align: center;
@@ -137,14 +137,14 @@ export const Container = styled.div`
                 border-radius: 8px;
                 box-shadow: 0 0 10px #ffffff;
                 svg {
-                    color: #1787c8;
+                    color: #407BFF;
                 }
                 
                 &::after {
                     content: attr(title);
                     min-width: 135px;
                     border-radius: 0px 10px 10px 0px;
-                    background-color: #1787c8;
+                    background-color: #407BFF;
                     box-shadow: 0 0 10px #ffffff;
                     padding: 3px;
                     color: #ffffff;

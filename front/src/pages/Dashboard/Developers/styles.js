@@ -1,18 +1,23 @@
 import styled from 'styled-components';
+import BackgroundImage from '../../../assets/background-geral.png';
 
 export const Container = styled.div`
     width: 100%;
     height: 100%;
     background: #ffffff;
     display: flex;
+    background-image: url(${BackgroundImage});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 `;
 
 export const ButtonAdd = styled.button`
     float: right;
     padding: 7px 15px 7px 15px;
     border-radius: 25px;
-    background:  ${props => props.status === "success" ? "#3aa281" : "#1787c8"};
-    border: ${props => props.status === "success" ? "2px solid #3aa281" : "2px solid #1787c8"};
+    background:  ${props => props.status === "success" ? "#3aa281" : "#407BFF"};
+    border: ${props => props.status === "success" ? "2px solid #3aa281" : "2px solid #407BFF"};
     color: ${props => props.status === "success" ? "#FFFF" : "#1f232b"};
     font-size: 14px;
     font-weight: bold;
@@ -31,7 +36,7 @@ export const ButtonAdd = styled.button`
 
     &:hover {
         background: transparent;
-        color: ${props => props.status === "success" ? "#FFFF" : "#1787c8"};
+        color: ${props => props.status === "success" ? "#FFFF" : "#407BFF"};
         transition: 0.3s;
     }
 `;
@@ -59,8 +64,8 @@ export const Content = styled.div`
             float: right;
             padding: 3px 10px 3px 10px;
             border-radius: 25px;
-            background:  #1787c8;
-            border: 2px solid #1787c8;
+            background:  #407BFF;
+            border: 2px solid #407BFF;
             color: #ffffff;
             font-size: 14px;
             font-weight: bold;
@@ -78,7 +83,7 @@ export const Content = styled.div`
 
             &:hover {
                 background: transparent;
-                color: #1787c8;
+                color: #407BFF;
                 transition: 0.3s;
             }
         }
@@ -86,12 +91,15 @@ export const Content = styled.div`
 
     form {
         width: 100%;
+        background: rgba(236, 236, 236,.8);
+        padding: 10px;
+        border-radius: 10px;
 
         label {
             display: block;
             margin-bottom: 5px;
             font-size: 14px;
-            color: #1787c8;
+            color: #407BFF;
         }
 
         input, select {
@@ -119,7 +127,7 @@ export const Content = styled.div`
             color: #3e3d3d;
 
             strong {
-                color: #1787c8;
+                color: #407BFF;
             }
 
             &:hover {
@@ -134,11 +142,12 @@ export const Table = styled.table`
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
+    box-shadow: 2px 2px 16px -9px black;
 
     thead tr td {
-        background: #bdbdbd;
+        background: #407bff;
         padding: 10px;
-        color: #1f232b;
+        color: #eeeeee;
         font-size: 15px;
         
         &:first-child {
@@ -156,11 +165,12 @@ export const Table = styled.table`
         padding-top: 7px;
         color: #3e3d3d;
         cursor: pointer;
+        background-color: rgba(236,236,236,.7);
     }
 
     tbody tr:hover {
         td {
-            background: #ececec;
+            background: rgba(236, 236, 236,.5);
         }
     }
 `;
@@ -171,9 +181,8 @@ export const ButtonDelete = styled.button`
     border-radius: 25px;
     background:  #f4786e;
     border: 2px solid #f4786e;
-    color: #1f232b;
+    color: #ffffff;
     font-size: 14px;
-    font-weight: bold;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     display: flex;
@@ -202,9 +211,8 @@ export const ButtonSave = styled.button`
     border-radius: 25px;
     background: #3aa281;
     border: 2px solid #3aa281;
-    color: #1f232b;
+    color: #ffffff;
     font-size: 14px;
-    font-weight: bold;
     transition: 0.3s;
     display: flex;
     justify-content: center;
@@ -224,7 +232,7 @@ export const ButtonSave = styled.button`
 export const Pagination = styled.div`
     width: 100%;
     height: 30px;
-    color: #1787c8;
+    color: #407BFF;
     margin-top: 15px;
 
     ul {
@@ -252,7 +260,7 @@ export const Pagination = styled.div`
         }
 
         .disabledPrevious {
-            color: #1787c8;
+            color: #407BFF;
             cursor: not-allowed;
             opacity: .4;
 

@@ -1,10 +1,15 @@
 import styled from 'styled-components';
+import BackgroundImage from '../../../assets/home.png';
 
 export const Container = styled.div`
     width: 100%;
     height: 100%;
     background: #ffffff;
     display: flex;
+    background-image: url(${BackgroundImage});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 `;
 
 export const Content = styled.div`
@@ -30,8 +35,8 @@ export const Widgets = styled.div`
         display: flex;
         flex-direction: column;
         padding: 20px;
-        border: 2px solid #1787c8;
-        background: #1787c8;
+        border: 2px solid #407BFF;
+        background: #407BFF;
         border-radius: 10px;
         transition: 0.3s;
 
@@ -42,7 +47,7 @@ export const Widgets = styled.div`
 
         &:hover {
             margin-top: 5px;
-            background: #1787c8;
+            background: #407BFF;
             transition: 0.3s;
             color: #ffffff;
             box-shadow: 0 0 2px #111419;
