@@ -27,3 +27,19 @@ Está disponível em cada package.json as libs utilizadas no front e no backend,
 da api e o react para o front.
 
 ### Dúvidas estou a disposição
+
+### Login
+
+![Login](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Login.png)
+
+### Dashboard
+
+![Dashboard](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Main.png)
+
+### Programadores
+
+![Programadores](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Programadores.png)
+
+### Edição
+
+![Edição](https://github.com/lucasmassi/icetec-project/edit/master/blob/master/front/src/assets/Edit.png)
