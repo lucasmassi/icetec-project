@@ -6,11 +6,14 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "build": "sucrase ./src -d ./dist --transforms imports",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "test": "jest"
   },
   "author": "Lucas Massi",
   "license": "ISC",
   "dependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "@types/jest": "^26.0.18",
     "axios": "^0.20.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -18,10 +21,12 @@
     "date-fns": "^2.2.1",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.2",
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.5",
+    "supertest": "^6.0.1",
     "youch": "^2.0.10",
     "yup": "^0.27.0"
   },
